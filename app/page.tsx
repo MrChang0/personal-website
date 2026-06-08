@@ -7,61 +7,61 @@ const navItems = [
 
 const expertise = [
   {
-    title: "系统架构",
-    value: "Architecture",
-    description: "围绕核心链路、服务边界、容量模型和故障域建立可演进的后端结构。"
+    title: "问题建模",
+    value: "Modeling",
+    description: "把模糊需求拆成清晰边界、约束条件和可验证的行动路径。"
   },
   {
-    title: "性能诊断",
-    value: "Profiling",
-    description: "从 CPU、内存、调用链和缓存命中率定位瓶颈，并沉淀可复用诊断路径。"
+    title: "系统设计",
+    value: "Design",
+    description: "用简洁的结构承载复杂需求，让方案在变化中依然容易理解和维护。"
   },
   {
-    title: "稳定性治理",
-    value: "Reliability",
-    description: "通过压测、限流、降级、监控和预案把复杂系统的不确定性收束起来。"
+    title: "工程交付",
+    value: "Delivery",
+    description: "关注从想法到上线的完整链路，尽量让每一步都有明确反馈。"
   },
   {
-    title: "工程效率",
-    value: "Productivity",
-    description: "让工具、规范和自动化测试服务于交付质量，而不是制造额外流程成本。"
+    title: "持续学习",
+    value: "Learning",
+    description: "保持对新工具、新范式和新问题的好奇心，并把学习转化为实践。"
   }
 ];
 
 const projects = [
   {
-    title: "性能诊断基础设施",
-    label: "P1 / Profiling Platform",
+    title: "项目案例 01",
+    label: "Project / Case Study",
     summary:
-      "把一次次线下排查沉淀成标准化性能诊断链路，支撑 CPU 热点、内存对象、线程状态和调用路径的快速定位。",
-    points: ["火焰图采集", "链路证据归档", "瓶颈归因模型"],
-    metric: "分钟级定位"
+      "这里会放一个真实项目：它解决了什么问题、你承担了什么角色、方案如何设计、最后产生了什么结果。",
+    points: ["问题背景", "关键方案", "结果数据"],
+    metric: "待补充"
   },
   {
-    title: "重内存服务稳定性治理",
-    label: "Reliability / JVM",
+    title: "项目案例 02",
+    label: "Project / Build Log",
     summary:
-      "围绕高内存占用服务建立容量评估、对象生命周期分析和降级保护，让服务在峰值压力下保持可控。",
-    points: ["内存水位治理", "GC 行为分析", "容量与回滚预案"],
-    metric: "风险前置"
+      "这里会放另一个真实项目：重点展示工程判断、取舍过程和可复用的经验，而不是堆砌技术名词。",
+    points: ["设计取舍", "实现路径", "经验沉淀"],
+    metric: "待补充"
   }
 ];
 
 const writings = [
   {
-    title: "从火焰图到工程闭环：性能优化不是一次排查",
-    tag: "Performance",
-    description: "如何把 profiler、监控和复盘机制变成团队可复制的方法。"
+    title: "近期文章计划 01",
+    tag: "Essay",
+    description: "记录一个正在思考的问题，等真实文章完成后替换为正式链接。"
   },
   {
-    title: "高内存 Java 服务的稳定性治理思路",
-    tag: "JVM",
-    description: "对象生命周期、缓存策略、GC 行为和容量模型之间的取舍。"
+    title: "近期文章计划 02",
+    tag: "Notes",
+    description: "可以放读书笔记、技术复盘、工具体验或项目构建过程。"
   },
   {
-    title: "复杂后端系统里的问题定位路径",
-    tag: "Architecture",
-    description: "从现象、证据、假设到验证，把排障过程结构化。"
+    title: "近期文章计划 03",
+    tag: "Log",
+    description: "保持简短、具体、可持续更新，不需要一开始就写成长文。"
   }
 ];
 
@@ -71,7 +71,7 @@ function SignalDiagram() {
       <div className="signal-grid" />
       <div className="node node-a">API</div>
       <div className="node node-b">Cache</div>
-      <div className="node node-c">JVM</div>
+      <div className="node node-c">Core</div>
       <div className="node node-d">Trace</div>
       <div className="pulse-ring ring-one" />
       <div className="pulse-ring ring-two" />
@@ -81,9 +81,9 @@ function SignalDiagram() {
         <path d="M146 118 C166 206 250 228 318 182 S398 162 438 246" />
       </svg>
       <div className="terminal-panel">
-        <span>p95 latency</span>
-        <strong>38ms</strong>
-        <code>heap.used ↓ · cpu.hotspot isolated</code>
+        <span>current focus</span>
+        <strong>Build</strong>
+        <code>idea → design → shipped</code>
       </div>
     </div>
   );
@@ -94,8 +94,8 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="回到首页">
-          <span className="brand-mark">LS</span>
-          <span>李书畅</span>
+          <span className="brand-mark">MC</span>
+          <span>MrChang0</span>
         </a>
         <nav aria-label="主导航">
           {navItems.map((item) => (
@@ -111,14 +111,12 @@ export default function Home() {
 
       <section className="hero section-shell" id="top">
         <div className="hero-copy">
-          <p className="mono-line">Java Backend Engineer / Systems Builder</p>
-          <h1>构建高性能系统，也构建解决问题的方法</h1>
-          <p className="hero-subtitle">
-            Java 后端工程师 · 系统架构 · 性能优化
-          </p>
+          <p className="mono-line">Personal Website / Work in Progress</p>
+          <h1>把想法做成作品，把过程留下痕迹</h1>
+          <p className="hero-subtitle">Projects · Writing · Experiments</p>
           <p className="hero-description">
-            我关注复杂系统背后的真实约束：吞吐、延迟、稳定性、可观测性和团队协作成本。
-            目标不是写更多代码，而是让关键链路更快、更稳、更容易解释。
+            这是一个正在构建中的个人主页。它会逐步沉淀真实项目、文章、实验和联系方式。
+            当前版本先搭好视觉和结构，后续内容会用真实经历替换。
           </p>
           <div className="hero-actions">
             <a className="primary-button" href="https://github.com/MrChang0">
@@ -135,11 +133,11 @@ export default function Home() {
       <section className="section-shell split-intro" id="expertise">
         <div>
           <p className="section-kicker">Capabilities</p>
-          <h2>把问题拆成可观测、可验证、可复用的工程能力。</h2>
+          <h2>先保留结构，再用真实内容一点点填满。</h2>
         </div>
         <p>
-          从线上异常到架构演进，我倾向于先建立证据链，再选择最小但有效的改动。
-          每一次排查都应该沉淀成下一次更快解决问题的工具或规则。
+          这个页面暂时不引用历史记忆里的项目和履历，只保留适合个人网站的版式。
+          之后可以把真实项目、文章链接和联系方式按模块补进去。
         </p>
       </section>
 
@@ -158,7 +156,7 @@ export default function Home() {
       <section className="section-shell project-section" id="projects">
         <div className="section-heading">
           <p className="section-kicker">Selected Work</p>
-          <h2>项目不是列表，是从复杂问题里走出来的结构化方法。</h2>
+          <h2>项目区先作为真实案例的容器，不提前编造经历。</h2>
         </div>
         <div className="project-stack">
           {projects.map((project) => (
@@ -190,7 +188,7 @@ export default function Home() {
       <section className="section-shell writing-section" id="writing">
         <div className="section-heading">
           <p className="section-kicker">Writing</p>
-          <h2>记录能被复用的排查路径和架构判断。</h2>
+          <h2>文章区先放计划，等真实内容完成后替换。</h2>
         </div>
         <div className="writing-list">
           {writings.map((post) => (
@@ -206,18 +204,18 @@ export default function Home() {
       <section className="about-contact section-shell" id="about">
         <div>
           <p className="section-kicker">About</p>
-          <h2>偏爱清晰边界、真实证据和能长期维护的工程设计。</h2>
+          <h2>保持页面真实，比把内容写得很满更重要。</h2>
         </div>
         <p>
-          我习惯在技术方案里同时考虑系统行为和团队行为：接口是否清晰，监控是否能解释问题，
-          变更是否容易回滚，经验是否能变成工具。好的后端系统不只是能跑，还应该能被理解。
+          第一版已经建立了视觉方向、响应式布局和部署链路。接下来最有价值的工作，
+          是把每个模块替换成经过确认的真实内容，而不是依赖推断。
         </p>
       </section>
 
       <footer className="site-footer section-shell" id="contact">
         <div>
           <p className="section-kicker">Contact</p>
-          <h2>一起聊聊复杂系统、性能问题或工程效率。</h2>
+          <h2>欢迎从 GitHub 开始了解这个页面的后续迭代。</h2>
         </div>
         <div className="footer-links">
           <a href="https://github.com/MrChang0">GitHub</a>
