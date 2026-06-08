@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "李书畅 / Shuchang Li - Backend Engineer",
   description:
     "Java 后端工程师，专注系统架构、性能优化、稳定性治理与工程效率。",
-  metadataBase: new URL("https://personal-website-mrchang0s-projects.vercel.app"),
+  metadataBase: new URL("https://personal-website-kappa-sepia-17.vercel.app"),
   openGraph: {
     title: "李书畅 / Shuchang Li - Backend Engineer",
     description:
